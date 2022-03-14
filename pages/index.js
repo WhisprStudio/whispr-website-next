@@ -7,7 +7,10 @@ import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useState} from "react";
+import { Canvas } from "react-three-fiber";
 import SpeakerImage from "../assets/partable.png"
+import {Lights} from "../components/Lights";
+import {Model} from "../components/Model";
 
 const theme = createTheme({
     palette: {
@@ -54,9 +57,13 @@ export default function Home() {
                             }} color={"primary"}>Contact us</Button>
                         </ThemeProvider>
                     </div>
-                    <div className={styles.speakerImage}>
-                        <Image src={SpeakerImage} alt={"speaker-image"} />
-                    </div>
+                </div>
+                <div className={styles.speakerImage}>
+                        <Canvas>
+                            <Lights />
+                            <Model />
+                        </Canvas>
+                        {/*<Image src={SpeakerImage} alt={"speaker-image"} />*/}
                 </div>
             </div>
             <div style={{width: "100vw", margin: 0, position: "absolute", top: "90%", left: 0, padding: 0}}>
