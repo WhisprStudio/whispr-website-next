@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.5.0",
     "@splinetool/react-spline": "^2.0.0",
+    "@splinetool/runtime": "^0.9.30",
     "drei": "^2.2.21",
     "next": "^12.1.0",
     "notistack": "^1.0.10",
