@@ -31,7 +31,6 @@
 }
 
 .speakerImage {
-  padding-top: 80px;
   width: 100%;
 }
 
@@ -40,15 +39,11 @@
     position: absolute;
     right: 20%;
     top: 28%;
-    z-index: -1;
     width: 400px;
   }
   .titleImageContainer {
     margin-left: 15%;
-    backdrop-filter: blur(15px);
     border-radius: 15px;
-    -webkit-box-shadow: 0px 0px 22px -8px #000000;
-    box-shadow: 0px 0px 22px -8px #000000;
   }
   .projectInfoContainer {
     display: flex;
@@ -77,7 +72,6 @@
     position: absolute;
     right: 10%;
     top: 20%;
-    z-index: -1;
     width: 500px;
   }
   .projectInfoContainer {
