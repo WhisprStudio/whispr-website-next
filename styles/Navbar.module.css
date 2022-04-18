@@ -1,8 +1,6 @@
 .menuContainer {
-    width: 90%;
-    display: flex;
-    justify-content: flex-end;
     position: fixed;
     top: 5%;
+    right: 5%;
     transition: all 0.4s;
 }
