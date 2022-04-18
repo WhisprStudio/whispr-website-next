@@ -51,6 +51,21 @@
   min-height: 50vh;
 }
 
+.separator {
+  background: #e0e0e0;
+  width: 80%;
+  height: 25px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15),
+  -2px -2px 10px rgba(255, 255, 255, 1), inset 2px 2px 10px rgba(0, 0, 0, 0.15),
+  inset -2px -2px 10px rgba(255, 255, 255, 1);
+  border-radius: 50px;
+}
+
+.separator.dark {
+  background: #1a1717;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25),
+  -15px -15px 30px rgba(255, 255, 255, 0.03), inset 2px 2px 10px rgba(0, 0, 0,  0.25), inset -2px -2px 10px rgba(255, 255, 255, 0.03);
+}
 
 .titleImageContainer {
   background: unset;
@@ -64,19 +79,20 @@
 .card {
   width: 90%;
   margin: 5% 0;
+  height: 50px;
   padding: 5% 5%;
   border: 2px solid transparent;
   border-radius: 20px;
   background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe,
-  -15px -15px 30px #ffffff;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1),
+  -15px -15px 30px rgba(255, 255, 255, 0.65);
   transition: all 0.4s;
 }
 
 .cardDark {
   background: #1a1717;
-  box-shadow: 15px 15px 30px #110e0e,
-  -15px -15px 30px #232121;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25),
+  -15px -15px 30px rgba(255, 255, 255, 0.03);
 }
 
 .card:hover {
