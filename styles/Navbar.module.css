@@ -1,2 +1,6 @@
-@import "globals.css";
-
+.menuContainer {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    transition: all 0.4s;
+}

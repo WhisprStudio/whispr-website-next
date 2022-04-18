@@ -1,15 +1,45 @@
 .mainContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  width: 90%;
 }
+
 .firstSectionContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  padding: 5%;
   height: 100vh;
+}
+
+.buttonHome {
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  color: inherit;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid transparent;
+  transition: all .3s;
+  box-shadow: 6px 6px 12px #c5c5c5,
+  -6px -6px 12px #ffffff;
+}
+
+.buttonHome.dark {
+  background: #1a1717;
+  box-shadow: 6px 6px 12px #110e0e,
+  -6px -6px 12px #232321;
+}
+
+.buttonHome:hover {
+  border: 1px solid #ffae00;
+}
+
+.buttonHome:active {
+  box-shadow: 4px 4px 12px #c5c5c5,
+  -4px -4px 12px #ffffff;
 }
 
 .projectInfoContainer {
@@ -18,12 +48,9 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 100vh;
+  min-height: 50vh;
 }
 
-.projectInfoContainer > div {
-  width: 100%;
-}
 
 .titleImageContainer {
   background: unset;
@@ -33,6 +60,29 @@
 .speakerImage {
   width: 100%;
 }
+
+.card {
+  width: 90%;
+  margin: 5% 0;
+  padding: 5% 5%;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe,
+  -15px -15px 30px #ffffff;
+  transition: all 0.4s;
+}
+
+.cardDark {
+  background: #1a1717;
+  box-shadow: 15px 15px 30px #110e0e,
+  -15px -15px 30px #232121;
+}
+
+.card:hover {
+  border: 2px solid #ffae00;
+}
+
 
 @media only screen and (min-width: 700px) {
   .speakerImage {
@@ -50,11 +100,13 @@
     justify-content: space-around;
     align-items: center;
   }
-  .projectInfoContainer > div {
-    padding: 10px;
-    width: 50%;
+  .card {
+    min-height: 400px;
+    padding: 5% 5%;
+    width: 45%;
   }
   .firstSectionContainer {
+    padding: 0;
     align-items: center;
     flex-direction: row;
     width: 80%;
@@ -79,8 +131,8 @@
     justify-content: space-around;
     align-items: center;
   }
-  .projectInfoContainer > div {
-    padding: 10px;
+  .card {
+    padding: 5% 3%;
     width: 30%;
   }
   .firstSectionContainer {
