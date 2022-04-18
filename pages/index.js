@@ -18,7 +18,15 @@ export default function Home() {
     const dim = useWindowDimensions();
 
     useEffect(() => {
-            document.body.classList.toggle("body-light")
+        let ret = false;
+        if (localStorage.getItem("darkMode") === "true")
+            ret = true;
+        setDarkMode(ret)
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem("darkMode",darkMode.toString())
+        document.body.classList.toggle("body-light")
     }, [darkMode])
 
   return (

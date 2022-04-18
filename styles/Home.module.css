@@ -77,9 +77,9 @@
 }
 
 .card {
+  cursor: pointer;
   width: 90%;
   margin: 5% 0;
-  height: 50px;
   padding: 5% 5%;
   border: 2px solid transparent;
   border-radius: 20px;

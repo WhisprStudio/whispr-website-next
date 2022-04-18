@@ -4,7 +4,7 @@ import {useGlobalState} from "../pages";
 export function Switch() {
     const [darkMode, setDarkMode] = useGlobalState('darkMode');
     return <label className={styles.switch}>
-            <input type="checkbox" onClick={() => {
+            <input type="checkbox" checked={darkMode} onClick={() => {
                 setDarkMode(!darkMode)
             }} />
             <span className={`${styles.round} ${styles.slider}`} />
