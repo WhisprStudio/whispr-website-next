@@ -5,7 +5,7 @@ import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useState} from "react";
-import Speaker from "../components/Speaker";
+import {Speaker} from "../components/Speaker";
 
 const theme = createTheme({
     palette: {
@@ -54,7 +54,6 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={styles.speakerImage}>
-                    <Speaker />
                 </div>
             </div>
             <div style={{width: "100vw", margin: 0, position: "absolute", top: "90%", left: 0, padding: 0}}>
