@@ -54,7 +54,6 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={styles.speakerImage}>
-                    <Speaker />
                 </div>
             </div>
             <div style={{width: "100vw", margin: 0, position: "absolute", top: "90%", left: 0, padding: 0}}>
