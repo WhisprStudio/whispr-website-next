@@ -5,7 +5,7 @@ import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar"
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useState} from "react";
-import Speaker from "../components/Speaker";
+import {Speaker} from "../components/Speaker";
 
 const theme = createTheme({
     palette: {

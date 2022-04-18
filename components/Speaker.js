@@ -1,7 +1,11 @@
-import Spline from "@splinetool/react-spline";
 import {useWindowDimensions} from "./WindowDim";
+import dynamic from 'next/dynamic';
 
-function Speaker() {
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+    ssr: false,
+});
+
+export function Speaker() {
 
     const dim = useWindowDimensions();
 
@@ -15,4 +19,3 @@ function Speaker() {
     )
 
 }
-export default Speaker;
