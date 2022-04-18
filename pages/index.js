@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import {Navbar} from "../components/Navbar";
 import { createGlobalState } from 'react-hooks-global-state';
 import {Card} from "../components/Card";
+import {useWindowDimensions} from "../components/WindowDim";
 
 const initialState = { darkMode: false };
 export const { useGlobalState } = createGlobalState(initialState);
@@ -14,7 +15,7 @@ export default function Home() {
     const [notif, setNotif] = useState(false);
 
     const [darkMode, setDarkMode] = useGlobalState('darkMode');
-
+    const dim = useWindowDimensions();
 
     useEffect(() => {
             document.body.classList.toggle("body-light")
@@ -44,8 +45,12 @@ export default function Home() {
                     </h2>
                     <div className={darkMode ? "dark" : ""}>
                         <button className={`${styles.buttonHome} ${darkMode ? styles.dark : ""}`} onClick={() => {
-                            navigator.clipboard.writeText("whispr.studio@gmail.com")
-                            setNotif(true)
+                            if (dim.width > 1200) {
+                                navigator.clipboard.writeText("whispr.studio@gmail.com")
+                                setNotif(true)
+                            } else {
+                                window.location.href = "mailto:whispr.studio@gmail.com@example.com?subject=Contact client"
+                            }
                         }}>Contact us</button>
                     </div>
                 </div>
