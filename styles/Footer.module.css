@@ -1,0 +1,21 @@
+.footerContainer {
+    width: 100vw;
+    background: #e8e8e8;
+    height: 200px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1),
+    -15px -15px 30px rgba(255, 255, 255, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s;
+}
+
+.footerContainer.dark {
+    background: #1a1717;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25),
+    -15px -15px 30px rgba(255, 255, 255, 0.03);
+}
+
+.footerContainer p {
+     color: #ffae00;
+ }

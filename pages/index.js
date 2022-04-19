@@ -6,6 +6,7 @@ import {Navbar} from "../components/Navbar";
 import { createGlobalState } from 'react-hooks-global-state';
 import {Card} from "../components/Card";
 import {useWindowDimensions} from "../components/WindowDim";
+import {Footer} from "../components/Footer";
 
 const initialState = { darkMode: false };
 export const { useGlobalState } = createGlobalState(initialState);
@@ -89,6 +90,7 @@ export default function Home() {
                 <Card title={"Portable version"} content={"The Portable Version, smaller, will be fully transportable whereever you'll need to isolate yourself from noises."}/>
                 <Card title={"Application"} content={"No more useless actions, it will adapt to your working hours and will warn you when you should take a break."}/>
             </div>
+            <Footer />
         </main>
   )
 }

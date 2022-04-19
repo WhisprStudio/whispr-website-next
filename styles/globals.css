@@ -30,6 +30,19 @@ body {
   width: 20px;
 }
 
+
+@keyframes changePage {
+  0% {
+    width: 1vw;
+  }
+  50% {
+    width: 101vw;
+  }
+  100% {
+    width: 1vw;
+  }
+}
+
 /* Track */
 /*::-webkit-scrollbar-track {
   background: transparent;
