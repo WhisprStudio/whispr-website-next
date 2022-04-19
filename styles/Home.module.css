@@ -9,6 +9,7 @@
 .firstSectionContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 5%;
   height: 100vh;
 }

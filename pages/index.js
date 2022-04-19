@@ -63,8 +63,7 @@ export default function Home() {
                         }}>Contact us</button>
                     </div>
                 </div>
-                <div className={styles.speakerImage}>
-                </div>
+
             </div>
             <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
             <div className={styles.projectInfoContainer}>
