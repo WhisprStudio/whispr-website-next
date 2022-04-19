@@ -57,7 +57,7 @@ export default function Home() {
                                 navigator.clipboard.writeText("whispr.studio@gmail.com")
                                 setNotif(true)
                             } else {
-                                window.location.href = "mailto:whispr.studio@gmail.com@example.com?subject=Contact client"
+                                window.location.href = "mailto:whispr.studio@gmail.com?subject=Contact client"
                             }
                         }}>Contact us</button>
                     </div>

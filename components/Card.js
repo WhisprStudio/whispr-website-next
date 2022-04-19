@@ -5,7 +5,7 @@ export function Card({content, title, icon}) {
 
     const [darkMode] = useGlobalState('darkMode');
 
-    return <div className={`${styles.card} ${darkMode ? styles.cardDark : ""}`}>
+    return <div className={`${styles.card} ${darkMode ? styles.cardDark : ""}  ${darkMode ? "dark" : ""}`}>
         <div>
             {icon}
             <h2 className={darkMode ? "dark" : ""}>{title}</h2>
