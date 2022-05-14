@@ -108,6 +108,7 @@ export default function Home() {
 
             </div>
             <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
+            <h1 className={darkMode ? "dark" : ""}>PRODUCT</h1>
             <div className={styles.projectInfoContainer}>
                 <Card icon={<img className={"pure"} alt={"salon"}  src={"/salon.png"} />} title={"Pro version"} content={"The Pro Version, bigger, allows more than 3 people at the same time in the bubble."}/>
                 <Card icon={<img className={"pure"} alt={"portable"}  src={"/partable.png"} />} title={"Portable version"} content={"The Portable Version, smaller, will be fully transportable wherever you need."}/>
