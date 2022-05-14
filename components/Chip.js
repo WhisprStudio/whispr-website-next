@@ -4,7 +4,7 @@ import {useGlobalState} from "../pages";
 export function Chip({content}) {
     const [darkMode, setDarkMode] = useGlobalState('darkMode');
 
-    return <div hidden={!content} className={`${styles.chip}`}>
+    return <div hidden={!content} className={`${styles.chip} ${darkMode ? "dark" : ""}`}>
         {content}
     </div>
 }
