@@ -126,11 +126,15 @@
   cursor: pointer;
 }
 
-.topButton:hover {
+.topButton:hover.dark {
   background: #ffae00;
   fill: #1a1717;
 }
 
+.topButton:hover {
+  background: #ffae00;
+  fill: #e0e0e0;
+}
 
 /*
 .card:hover.dark p {
