@@ -9,6 +9,8 @@ import {useWindowDimensions} from "../components/WindowDim";
 import {Footer} from "../components/Footer";
 import {Chip} from "../components/Chip";
 import {Headline} from "../components/Headline";
+import {add} from "three/examples/jsm/nodes/ShaderNode";
+import {TopButton} from "../components/TopButton";
 
 const initialState = { darkMode: false };
 export const { useGlobalState } = createGlobalState(initialState);
@@ -32,10 +34,10 @@ export default function Home() {
         document.body.classList.toggle("body-light")
     }, [darkMode])
 
-  return (
-        <main className={styles.mainContainer}>
-
+    return (
+        <main id={"main"} className={styles.mainContainer}>
             <Navbar />
+            <TopButton />
             <Snackbar
                 open={notif}
                 anchorOrigin={{vertical: 'top', horizontal: 'center'}}

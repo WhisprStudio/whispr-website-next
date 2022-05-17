@@ -10,6 +10,5 @@ export function Switch() {
             }}/>
             <span className={`${styles.round} ${styles.slider}`} />
         </label>
-        <div id={"panel"} className={`${styles.panelAnimation} ${darkMode ? styles.active : ""}`} />
     </>
 }

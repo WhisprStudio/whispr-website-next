@@ -59,20 +59,3 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
-.panelAnimation {
-    position: fixed;
-    top: 0;
-    left: -1vw;
-    width: 1vw;
-    height: 100vh;
-    background: #1a1717;
-    z-index: 2000;
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25),
-    -15px -15px 30px rgba(255, 255, 255, 0.03);
-    animation: changePage ease-in-out 2s;
-}
-
-.panelAnimation.active {
-    animation: changePage ease-in-out 2s;
-}

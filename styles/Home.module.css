@@ -114,6 +114,24 @@
   text-align: center;
 }
 
+.topButton {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 60px;
+  height: 34px;
+  fill: #ffae00;
+  border-radius: 30px;
+  border: 2px solid #ffae00;
+  cursor: pointer;
+}
+
+.topButton:hover {
+  background: #ffae00;
+  fill: #1a1717;
+}
+
+
 /*
 .card:hover.dark p {
   color: #e8e8e8;
