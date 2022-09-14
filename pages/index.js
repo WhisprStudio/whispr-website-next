@@ -9,7 +9,6 @@ import {useWindowDimensions} from "../components/WindowDim";
 import {Footer} from "../components/Footer";
 import {Chip} from "../components/Chip";
 import {Headline} from "../components/Headline";
-import {add} from "three/examples/jsm/nodes/ShaderNode";
 import {TopButton} from "../components/TopButton";
 
 const initialState = { darkMode: false };
@@ -18,7 +17,6 @@ export const { useGlobalState } = createGlobalState(initialState);
 export default function Home() {
 
     const [notif, setNotif] = useState(false);
-
     const [darkMode, setDarkMode] = useGlobalState('darkMode');
     const dim = useWindowDimensions();
 
