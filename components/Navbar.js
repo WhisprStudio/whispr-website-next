@@ -1,10 +1,13 @@
 import {Switch} from "./Switch";
 import styles from "../styles/Navbar.module.css"
 import {useCallback, useEffect, useState} from "react";
+import {LogoWhite, LogoBlack} from "./Logo";
+import { useGlobalState } from "../pages";
 
 export function Navbar() {
     const [visible, setVisible] = useState(true);
     const [y, setY] = useState(0);
+    const [darkMode, setDarkMode] = useGlobalState('darkMode');
 
     const handleNavigation = useCallback(
         e => {
@@ -28,6 +31,9 @@ export function Navbar() {
     }, [handleNavigation]);
 
     return <div style={{top: visible ? '5%' : '-80px'}} className={styles.menuContainer}>
+        <div style={{width: "100px"}}>
+            {darkMode ? <LogoWhite /> : <LogoBlack />}
+        </div>
         <Switch />
    </div>
 }

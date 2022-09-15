@@ -118,6 +118,13 @@ svg {
   transition: all .4s;
 }
 
+svg.logo {
+  width: 150px;
+  height: unset;
+  margin-top: -50px;
+  transition: all .4s;
+}
+
 p {
   font-size: 18px;
   line-height: 150%;
