@@ -46,8 +46,8 @@ export default function Team() {
     return  (
         <div className={styles.team}>
             {
-                teamArr.map(member => { return (
-                    <div className={styles.member}>
+                teamArr.map((member, id) => { return (
+                    <div className={styles.member} key={id}>
                         <Avatar
                             alt={member.name}
                             src={member.src}
