@@ -10,6 +10,7 @@ import {Footer} from "../components/Footer";
 import {Chip} from "../components/Chip";
 import {Headline} from "../components/Headline";
 import {TopButton} from "../components/TopButton";
+import Team from '../components/TEAM';
 
 const initialState = { darkMode: false };
 export const { useGlobalState } = createGlobalState(initialState);
@@ -114,6 +115,9 @@ export default function Home() {
                 <Card icon={<img className={"pure"} alt={"salon"}  src={"/salon.png"} />} title={"Pro version"} content={"The Pro Version, bigger, allows more than 3 people at the same time in the bubble."}/>
                 <Card icon={<img className={"pure"} alt={"portable"}  src={"/partable.png"} />} title={"Portable version"} content={"The Portable Version, smaller, will be fully transportable wherever you need."}/>
             </div>
+            <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
+            <Headline content={"TEAM"} />
+            <Team/>
             <Footer />
         </main>
   )
