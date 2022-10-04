@@ -51,7 +51,7 @@ export default function Team() {
                         <Avatar
                             alt={member.name}
                             src={member.src}
-                            sx={{ width: 100, height: 100 }}
+                            sx={{ width: 90, height: 90 }}
                         />
                         <h3 className={darkMode ? "dark" : ""}>{member.name}</h3>
                         <p className={darkMode ? "dark" : ""}>
