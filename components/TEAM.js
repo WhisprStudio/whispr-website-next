@@ -6,37 +6,37 @@ const teamArr = [
     {
         src: "/photos/Fahad.jpg",
         name: "Fahad Assoumani",
-        desc: "Lorem ipsum dolor sit amet",
+        desc: "DevOps SRE",
     },
     {
         src: "/photos/Thomas.jpg",
         name: "Thomas Garcia",
-        desc: "Lorem ipsum dolor sit amet",
+        desc: "Frontend developper",
     },
     {
         src: "/photos/Paul.jpg",
         name: "Paul Erny",
-        desc: "Lorem ipsum dolor sit amet",
+        desc: "IOS developper",
     },
     {
         src: "/photos/Lucas.jpg",
         name: "Lucas Cherloneix",
-        desc: "Lorem ipsum dolor sit amet",
+        desc: "Frontend developper",
     },
     {
         src: "/photos/Victor.jpg",
         name: "Victor Maurin",
-        desc: "Lorem ipsum dolor sit amet",
+        desc: "Android developper",
     },
     {
         src: "/photos/Hugo.jpg",
         name: "Hugo Lalet",
-        desc: "Lorem ipsum dolor sit amet",
+        desc: "Embeded developper",
     },
     {
         src: "/photos/Antonin.jpg",
         name: "Antonin Keuck",
-        desc: "Lorem ipsum dolor sit amet",
+        desc: "Developper Mobile",
     },
 ]
 
