@@ -11,7 +11,7 @@ const teamArr = [
     {
         src: "/photos/Thomas.jpg",
         name: "Thomas Garcia",
-        desc: "Frontend developper",
+        desc: "Frontend/Android developper & Designer",
     },
     {
         src: "/photos/Paul.jpg",
@@ -21,12 +21,12 @@ const teamArr = [
     {
         src: "/photos/Lucas.jpg",
         name: "Lucas Cherloneix",
-        desc: "Frontend developper",
+        desc: "Frontend/Android developper",
     },
     {
         src: "/photos/Victor.jpg",
         name: "Victor Maurin",
-        desc: "Android developper",
+        desc: "IOS developper",
     },
     {
         src: "/photos/Hugo.jpg",
@@ -36,7 +36,7 @@ const teamArr = [
     {
         src: "/photos/Antonin.jpg",
         name: "Antonin Keuck",
-        desc: "Developper Mobile",
+        desc: "Android developper",
     },
 ]
 
