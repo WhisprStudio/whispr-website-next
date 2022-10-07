@@ -11,6 +11,10 @@ import {Chip} from "../components/Chip";
 import {Headline} from "../components/Headline";
 import {TopButton} from "../components/TopButton";
 import Team from '../components/Team';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false; /* eslint-disable import/first */
 
 const initialState = { darkMode: false };
 export const { useGlobalState } = createGlobalState(initialState);
