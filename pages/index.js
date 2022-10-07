@@ -10,7 +10,7 @@ import {Footer} from "../components/Footer";
 import {Chip} from "../components/Chip";
 import {Headline} from "../components/Headline";
 import {TopButton} from "../components/TopButton";
-import Team from '../components/TEAM';
+import Team from '../components/Team';
 
 const initialState = { darkMode: false };
 export const { useGlobalState } = createGlobalState(initialState);
@@ -22,9 +22,9 @@ export default function Home() {
     const dim = useWindowDimensions();
 
     useEffect(() => {
-        let ret = false;
-        if (localStorage.getItem("darkMode") === "true")
-            ret = true;
+        let ret = true;
+        if (localStorage.getItem("darkMode") === "false")
+            ret = false;
         setDarkMode(ret)
     }, [])
 
@@ -71,30 +71,41 @@ export default function Home() {
             </div>
             <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
             <Headline content={"CONCEPT"} />
-            <div className={styles.projectInfoContainer}>
-                <Card icon={<svg className={darkMode ? "dark" : ""} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M160.1 320c-17.64 0-32.02 14.37-32.02 31.1s14.38 31.1 32.02 31.1s32.02-14.37 32.02-31.1S177.8 320 160.1 320zM86.66 361.4c-12.51-12.49-32.77-12.49-45.27 0c-12.51 12.5-12.51 32.78 0 45.27l63.96 63.99c12.51 12.49 32.77 12.49 45.27 .002c12.51-12.5 12.51-32.78 0-45.27L86.66 361.4zM32.02 448C14.38 448 0 462.4 0 480S14.38 512 32.02 512c17.64 0 32.02-14.37 32.02-31.1S49.66 448 32.02 448zM287.7 70.31c-110.9-29.38-211.7 47.53-222.8 150.9C62.1 239.9 78.73 255.1 97.57 255.1c16.61 0 29.25-13.07 31.24-29.55c6.934-57.22 57.21-101.3 116.9-98.3c71.71 3.594 117.1 76.82 102.5 146.9c-6.551 29.65-21.4 56.87-43.38 78.87L288 370.7v13.25c0 31.4-22.71 57.58-52.58 62.98C220.4 449.7 208 463.3 208 478.6c0 19.78 17.88 34.94 37.38 31.64c55.92-9.443 99.63-55.28 105.9-112.2c40.11-40.68 62.89-93.95 64.65-150.9C418.4 166.4 365.8 91 287.7 70.31zM240 200c22.06 0 40 17.94 40 40c0 13.25 10.75 24 24 24s24-10.75 24-24c0-48.53-39.47-88-88-88S152 191.5 152 240c0 13.25 10.75 24 24 24S200 253.3 200 240C200 217.9 217.9 200 240 200zM397.8 3.125c-15.91-7.594-35.05-.8438-42.66 15.09c-7.594 15.97-.8281 35.06 15.12 42.66C417.5 83.41 448 134.9 448 192c0 17.69 14.33 32 32 32S512 209.7 512 192C512 110.3 467.2 36.19 397.8 3.125z"/></svg>} title={"Issue"} content={"Noise at work is one of the most important factor that leads to stress."}/>
-                <Card icon={
-                    <svg className={darkMode ? "dark" : ""} width="45.793px" height="45.793px" viewBox="0 0 45.793 45.793">
-                    <circle cx="22.899" cy="12.692" r="2.524"/>
-                    <path d="M22.899,26.661c-2.893,0-5.245,2.354-5.245,5.245c0,2.893,2.353,5.244,5.245,5.244s5.246-2.353,5.246-5.244
-                    C28.145,29.016,25.791,26.661,22.899,26.661z"/>
-                    <path d="M30.701,0H15.093c-4.647,0-8.415,3.768-8.415,8.414v28.965c0,4.646,3.768,8.414,8.415,8.414H30.7
-                    c4.647,0,8.415-3.768,8.415-8.414V8.414C39.116,3.768,35.348,0,30.701,0z M22.899,7.182c3.042,0,5.511,2.467,5.511,5.511
-                    c0,3.043-2.469,5.511-5.511,5.511c-3.044,0-5.511-2.468-5.511-5.511C17.388,9.648,19.855,7.182,22.899,7.182z M22.899,42.13
-                    c-5.646,0-10.223-4.577-10.223-10.224s4.576-10.223,10.223-10.223c5.646,0,10.223,4.577,10.223,10.223S28.544,42.13,22.899,42.13z
-                    "/>
-                    </svg>} title={"Speaker"} content={"Place it in front of yourself and create your bubble to be isolated from noises."}/>
-                <Card icon={<svg className={darkMode ? "dark" : ""} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path d="M304 0h-224c-35.35 0-64 28.65-64 64v384c0 35.35 28.65 64 64 64h224c35.35 0 64-28.65 64-64V64C368 28.65 339.3 0 304 0zM192 480c-17.75 0-32-14.25-32-32s14.25-32 32-32s32 14.25 32 32S209.8 480 192 480zM304 64v320h-224V64H304z"/></svg>
-                } title={"Application"} content={"Control the speaker to create silence, Activate zenmode to isolate yourself from notifications."}/>
+            <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+                <div className={styles.issue}>
+                    <h2 className={darkMode ? "dark" : ""}>Issue</h2>
+                    <p className={darkMode ? "dark" : ""}>Noise at work is one of the most important factor that leads to stress. Indeed, noise makes it more difficult to concentrate, which has a negative impact on employee productivity. In addition to decreasing concentration and cognitive performance, noise at work can cause fatigue, discomfort, nervousness, difficult inter-employee communication, which can be the source of work-related accidents.</p>
+                </div>
+                <div className={styles.conceptProduct}>
+                    <Card icon={
+                        <svg className={darkMode ? "dark" : ""} width="45.793px" height="45.793px" viewBox="0 0 45.793 45.793">
+                        <circle cx="22.899" cy="12.692" r="2.524"/>
+                        <path d="M22.899,26.661c-2.893,0-5.245,2.354-5.245,5.245c0,2.893,2.353,5.244,5.245,5.244s5.246-2.353,5.246-5.244
+                        C28.145,29.016,25.791,26.661,22.899,26.661z"/>
+                        <path d="M30.701,0H15.093c-4.647,0-8.415,3.768-8.415,8.414v28.965c0,4.646,3.768,8.414,8.415,8.414H30.7
+                        c4.647,0,8.415-3.768,8.415-8.414V8.414C39.116,3.768,35.348,0,30.701,0z M22.899,7.182c3.042,0,5.511,2.467,5.511,5.511
+                        c0,3.043-2.469,5.511-5.511,5.511c-3.044,0-5.511-2.468-5.511-5.511C17.388,9.648,19.855,7.182,22.899,7.182z M22.899,42.13
+                        c-5.646,0-10.223-4.577-10.223-10.224s4.576-10.223,10.223-10.223c5.646,0,10.223,4.577,10.223,10.223S28.544,42.13,22.899,42.13z
+                        "/>
+                        </svg>} title={"Speaker"} content={"Place it in front of yourself and create your bubble to be isolated from noises."}/>
+                    <Card icon={<svg className={darkMode ? "dark" : ""} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path d="M304 0h-224c-35.35 0-64 28.65-64 64v384c0 35.35 28.65 64 64 64h224c35.35 0 64-28.65 64-64V64C368 28.65 339.3 0 304 0zM192 480c-17.75 0-32-14.25-32-32s14.25-32 32-32s32 14.25 32 32S209.8 480 192 480zM304 64v320h-224V64H304z"/></svg>
+                    } title={"Application"} content={"Control the speaker to create silence, Activate zenmode to isolate yourself from notifications."}/>
+                </div>
+            </div>
+            <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
+            <Headline content={"PRODUCT"} />
+            <div className={styles.productInfoContainer}>
+                <Card icon={<img className={"pure"} alt={"salon"}  src={"/salon.png"} />} title={"Pro version"} content={"The Pro Version, bigger, allows more than 3 people at the same time in the bubble."}/>
+                <Card icon={<img className={"pure"} alt={"portable"}  src={"/partable.png"} />} title={"Portable version"} content={"The Portable Version, smaller, will be fully transportable wherever you need."}/>
             </div>
             <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
             <div className={`${styles.appSection}`}>
-                <img className={darkMode ? "dark" : ""} alt={"app"} height={200} src={"/app.jpg"} />
+                <img className={darkMode ? "dark" : ""} alt={"app"} height={200} src={"/apprefined.png"} />
                 <div>
                     <Headline content={"APPLICATION"} />
                     <p className={darkMode ? "dark" : ""}>No more useless actions, it will adapt to your working hours and will warn you when you should take a break.</p>
-                    <p className={darkMode ? "dark" : ""}>Available on <svg  className={darkMode ? "dark sm" : "sm"} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    <p className={darkMode ? "dark" : ""}>Soon available on <svg  className={darkMode ? "dark sm" : "sm"} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                          viewBox="0 0 50 50">
                         <path d="M 16 3 C 9.38 3 4 8.38 4 15 L 4 35 C 4 41.62 9.38 47 16 47 L 36 47 C 42.62 47 48 41.62 48 35 L 48 15 C 48 8.38 42.62 3 36 3 L 16 3 z M 12.619141 18.070312 C 13.319141 18.070312 13.839844 18.570469 13.839844 19.230469 C 13.839844 19.880469 13.319141 20.380859 12.619141 20.380859 C 11.909141 20.380859 11.390625 19.880469 11.390625 19.230469 C 11.390625 18.570469 11.909141 18.070312 12.619141 18.070312 z M 23.039062 18.640625 C 26.689062 18.640625 28.939453 21.189297 28.939453 25.279297 C 28.939453 29.359297 26.709062 31.929688 23.039062 31.929688 C 19.349062 31.929688 17.109375 29.369297 17.109375 25.279297 C 17.109375 21.179297 19.399062 18.640625 23.039062 18.640625 z M 35.970703 18.640625 C 38.540703 18.640625 40.419062 20.139297 40.539062 22.279297 L 38.619141 22.279297 C 38.429141 21.109297 37.419453 20.380859 35.939453 20.380859 C 34.379453 20.380859 33.349609 21.119531 33.349609 22.269531 C 33.349609 23.169531 34.009922 23.690078 35.669922 24.080078 L 37.060547 24.419922 C 39.670547 25.029922 40.740234 26.080234 40.740234 27.990234 C 40.740234 30.420234 38.859609 31.939453 35.849609 31.939453 C 33.039609 31.939453 31.149766 30.490703 31.009766 28.220703 L 32.960938 28.220703 C 33.130938 29.420703 34.31 30.189453 36 30.189453 C 37.58 30.189453 38.740234 29.370234 38.740234 28.240234 C 38.740234 27.280234 38.010078 26.700781 36.330078 26.300781 L 34.689453 25.910156 C 32.399453 25.370156 31.349609 24.260391 31.349609 22.400391 C 31.349609 20.140391 33.200703 18.640625 35.970703 18.640625 z M 23.039062 20.470703 C 20.649062 20.470703 19.130859 22.339297 19.130859 25.279297 C 19.130859 28.209297 20.599062 30.099609 23.039062 30.099609 C 25.449062 30.099609 26.929688 28.209297 26.929688 25.279297 C 26.929688 22.339297 25.449063 20.470703 23.039062 20.470703 z M 11.679688 22.060547 L 13.560547 22.060547 L 13.560547 31.630859 L 11.679688 31.630859 L 11.679688 22.060547 z"/></svg>
                         and
@@ -108,12 +119,6 @@ export default function Home() {
                     </div>
                 </div>
 
-            </div>
-            <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
-            <Headline content={"PRODUCT"} />
-            <div className={styles.projectInfoContainer}>
-                <Card icon={<img className={"pure"} alt={"salon"}  src={"/salon.png"} />} title={"Pro version"} content={"The Pro Version, bigger, allows more than 3 people at the same time in the bubble."}/>
-                <Card icon={<img className={"pure"} alt={"portable"}  src={"/partable.png"} />} title={"Portable version"} content={"The Portable Version, smaller, will be fully transportable wherever you need."}/>
             </div>
             <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
             <Headline content={"TEAM"} />

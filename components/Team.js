@@ -53,8 +53,8 @@ export default function Team() {
                             src={member.src}
                             sx={{ width: 90, height: 90 }}
                         />
-                        <h3 className={darkMode ? "dark" : ""}>{member.name}</h3>
-                        <p className={darkMode ? "dark" : ""}>
+                        <h3 style={{height: '1%'}} className={darkMode ? "dark" : ""}>{member.name}</h3>
+                        <p  className={darkMode ? "dark" : ""}>
                             {member.desc}
                         </p>
                     </div>
