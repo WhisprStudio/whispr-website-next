@@ -3,6 +3,7 @@ import styles from "../styles/Navbar.module.css"
 import {useCallback, useEffect, useState} from "react";
 import {LogoWhite, LogoBlack} from "./Logo";
 import { useGlobalState } from "../pages";
+import {DayNightButton} from "./DayNightButton";
 
 export function Navbar() {
     const [visible, setVisible] = useState(true);
@@ -34,6 +35,6 @@ export function Navbar() {
         <div style={{width: "100px"}}>
             {darkMode ? <LogoWhite /> : <LogoBlack />}
         </div>
-        <Switch />
+        <DayNightButton/>
    </div>
 }
