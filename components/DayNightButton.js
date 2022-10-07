@@ -14,8 +14,8 @@ export function DayNightButton() {
                 setDarkMode(!darkMode)
             }} id="chk"/>
             <label className={styles.label} htmlFor="chk">
-                <FontAwesomeIcon icon={faSun} color="white" size='sm'/>
-                <FontAwesomeIcon icon={faMoon} color="white" size='sm' />
+                <FontAwesomeIcon icon={faMoon} color="white" size='sm'/>
+                <FontAwesomeIcon icon={faSun} color="white" size='sm' />
                 <div className={styles.ball}></div>
             </label>
         </div>
