@@ -1,0 +1,36 @@
+.headline {
+  color: black;
+}
+
+.headline.dark {
+  color: white;
+}
+
+.headline {
+  text-align: left;
+}
+.headline span {
+  padding-right: 20px;
+  border-bottom: 15px solid #ffae00;
+  display: inline-block;
+  height: 1.1em;
+}
+.headline.dark span {
+  border-bottom: 15px solid #cb8b00;
+}
+
+
+@media only screen and (max-width: 764px) {
+  .headline {
+    text-align: center;
+  }
+  .headline span {
+    padding-right: 10px;
+    border-bottom: 10px solid #ffae00;
+    height: 1.1em;
+  }
+  .headline.dark span {
+    border-bottom: 10px solid #cb8b00;
+  }
+}
+

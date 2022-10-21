@@ -7,12 +7,15 @@ html {
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   max-width: 1550px;
   padding: 0;
   margin: 0;
+  background-color: #1a1717;
   font-family: 'Chivo', 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   width: 100%;
@@ -20,26 +23,140 @@ body {
   justify-content: center;
 }
 
+img {
+  cursor: pointer;
+  height: 500px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1),
+  -15px -15px 30px rgba(255, 255, 255, 0.65);
+  transition: all 0.6s;
+}
+
+img.pure {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  background: transparent;
+  border: 0 solid transparent;
+  box-shadow: unset;
+}
+
+img.pure:hover {
+  border: 0
+}
+
+img.dark {
+  background: #1a1717;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25),
+  -15px -15px 30px rgba(255, 255, 255, 0.03);
+}
+
+svg.sm {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+img:hover {
+  border: 2px solid #ffae00;
+  border-radius: 30px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.body-light {
+  background-color: #e8e8e8;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+
+@keyframes changePage {
+  0% {
+    width: 1vw;
+  }
+  50% {
+    width: 101vw;
+  }
+  100% {
+    width: 1vw;
+  }
+}
+
+/* Track */
+/*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+!* Handle *!
+::-webkit-scrollbar-thumb {
+  background: #ffae00;
+  border-radius: 10px;
+}*/
+
+
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 20px 20px transparent;
+  border: solid 6px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 10px 10px #ffae00;
+  border: solid 6px transparent;
+}
+svg {
+  width: 45px;
+  height: 45px;
+  transition: all .4s;
+}
+
+svg.logo {
+  width: 150px;
+  height: unset;
+  margin-top: -50px;
+  transition: all .4s;
+}
+
 p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
   font-family: 'Chivo', sans-serif;
+  transition: all .4s;
+}
+
+svg.dark {
+  fill: #e8e8e8;
+}
+
+p.dark, h1.dark, h2.dark, h3.dark, div.dark {
+  color: #e8e8e8;
 }
 
 h1 {
   font-size: 50px;
+  margin: 0;
   font-family: 'Raleway', sans-serif;
   font-style: italic;
   font-weight: 900;
+  transition: all .4s;
 }
 
 h2 {
   font-size: 30px;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
+  transition: all .4s;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 764px) {
   p {
     font-size: 18px;
     line-height: 150%;
