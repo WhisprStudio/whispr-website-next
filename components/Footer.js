@@ -6,7 +6,7 @@ export function Footer() {
     const [darkMode, setDarkMode] = useGlobalState('darkMode');
 
     return <div className={`${styles.footerContainer} ${darkMode ? styles.dark : " "}`}>
-        <h2>Do you want to contact us ?</h2>
+        <h2 className={darkMode ? "dark" : " "}>Do you want to contact us ?</h2>
         <p className={darkMode ? "dark" : " "}>whispr.<span>studio</span>@gmail.com &copy;</p>
     </div>
 }

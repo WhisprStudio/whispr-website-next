@@ -32,7 +32,7 @@ export function Navbar() {
     }, [handleNavigation]);
 
     return <div style={{top: visible ? '5%' : '-80px'}} className={styles.menuContainer}>
-        <div style={{width: "100px"}}>
+        <div>
             {darkMode ? <LogoWhite /> : <LogoBlack />}
         </div>
         <DayNightButton/>

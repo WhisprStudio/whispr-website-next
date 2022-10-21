@@ -51,10 +51,10 @@ export default function Team() {
                         <Avatar
                             alt={member.name}
                             src={member.src}
-                            sx={{ width: 90, height: 90 }}
+                            style={{width: "50px", height: "40px"}}
                         />
-                        <h3 style={{height: '1%'}} className={darkMode ? "dark" : ""}>{member.name}</h3>
-                        <p  className={darkMode ? "dark" : ""}>
+                        <h4 className={darkMode ? "dark" : ""}>{member.name}</h4>
+                        <p  className={darkMode ? "dark avatar" : "avatar"}>
                             {member.desc}
                         </p>
                     </div>
