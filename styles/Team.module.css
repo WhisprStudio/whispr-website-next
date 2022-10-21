@@ -4,9 +4,20 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
+    margin-top: 100px;
     width: 90%;
 }
 
+@media only screen and (min-width: 764px) {
+    .team {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        width: 60%;
+    }
+}
 .member {
     display: flex;
     text-align: center;

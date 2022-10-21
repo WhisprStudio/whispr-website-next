@@ -1,0 +1,33 @@
+Inline Model [
+    Inline Model 1
+    ]
+    Inline Model 1 {
+    id (integer, optional),
+    code (integer, optional),
+    counry (string, optional),
+    name (string, optional),
+    disciplines (Array[string], optional),
+    disciplineType (integer, optional),
+    status (integer, optional) = ['0', '1', '2', '3'],
+    races (Array[HorseRacing.Api.Models.V2.RaceMeetingV2], optional)
+    }
+    HorseRacing.Api.Models.V2.RaceMeetingV2 {
+    id (integer, optional),
+    code (integer, optional),
+    name (string, optional),
+    description (string, optional),
+    prizePool (number, optional),
+    status (integer, optional),
+    discipline (string, optional),
+    disciplineType (integer, optional),
+    distance (integer, optional),
+    startTime (string, optional),
+    numberOfParticipants (integer, optional),
+    marketTypes (Array[integer], optional),
+    result (Array[integer], optional),
+    results (Array[Turf.Core.Model.Model.V2.PositionResults], optional)
+    }
+    Turf.Core.Model.Model.V2.PositionResults {
+    position (integer, optional),
+    horsesNumbers (Array[string], optional)
+    }

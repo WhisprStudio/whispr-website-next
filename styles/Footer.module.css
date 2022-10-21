@@ -5,6 +5,7 @@
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1),
     -15px -15px 30px rgba(255, 255, 255, 0.65);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all .4s;
