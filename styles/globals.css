@@ -150,6 +150,15 @@ p.dark, h1.dark, h2.dark, h3.dark, div.dark {
   color: #e8e8e8;
 }
 
+img.avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: none;
+  border: none;
+}
+
 h1 {
   font-size: 50px;
   margin: 0;

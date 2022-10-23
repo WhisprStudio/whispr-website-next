@@ -48,10 +48,10 @@ export default function Team() {
             {
                 teamArr.map((member, id) => { return (
                     <div className={styles.member} key={id}>
-                        <Avatar
+                        <img
+                            className="avatar"
                             alt={member.name}
                             src={member.src}
-                            style={{width: "50px", height: "40px"}}
                         />
                         <h4 className={darkMode ? "dark" : ""}>{member.name}</h4>
                         <p  className={darkMode ? "dark avatar" : "avatar"}>
