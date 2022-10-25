@@ -6,8 +6,8 @@ export function Roadmap() {
 
     return <div className={styles.roadmap}>
             <img 
-                className={darkMode ? "dark" : ""} 
-                alt={"roadmap"} 
+                className={darkMode ? "darkr" : "r"}
+                alt={"roadmap"}
                 src={darkMode ? "/roadmap_darkmode.png" : "/roadmap_normalmode.png"}>
             </img>
         </div>
