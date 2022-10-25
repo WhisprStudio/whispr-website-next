@@ -8,6 +8,7 @@ import {Card} from "../components/Card";
 import {useWindowDimensions} from "../components/WindowDim";
 import {Footer} from "../components/Footer";
 import {Chip} from "../components/Chip";
+import { Roadmap } from '../components/Roadmap';
 import {Headline} from "../components/Headline";
 import {TopButton} from "../components/TopButton";
 import Team from '../components/Team';
@@ -120,6 +121,9 @@ export default function Home() {
                 <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
                 <Headline content={"TEAM"} />
                 <Team/>
+                <div className={`${styles.separator} ${darkMode ? styles.dark : ""}`}/>
+                <Headline content={"ROADMAP"} />
+                <Roadmap/>
                 <Footer />
             </div>
         </main>
