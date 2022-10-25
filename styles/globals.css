@@ -53,30 +53,22 @@ img.dark {
   -15px -15px 30px rgba(255, 255, 255, 0.03);
 }
 
-img.r {
+.roadmap > img {
   width: 90%;
   height: 90%;
   padding: 10px;
 }
 
-img.darkr {
-  background: #1a1717;
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25),
-  -15px -15px 30px rgba(255, 255, 255, 0.03);
-  width: 90%;
-  height: 90%;
-  padding: 10px;
+.roadmap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 @media only screen and (min-width: 764px) {
-  img.darkr {
-    background: #1a1717;
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25),
-    -15px -15px 30px rgba(255, 255, 255, 0.03);
-    width: 80%;
-    padding: 20px;
-  }
-  img.r {
+  .roadmap > img {
     width: 80%;
     padding: 20px;
   }
